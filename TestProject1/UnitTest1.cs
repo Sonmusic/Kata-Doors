@@ -6,8 +6,12 @@ namespace TestProject1
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void True_Open_Closed_And_Unlocked_Door()
         {
+            DoorClass.Door door = new DoorClass.Door();
+            door.ClosedAndUnlocked("123");
+            door.Open();
+            Assert.AreEqual(true, door.IsOpen());
         }
     }
 }
